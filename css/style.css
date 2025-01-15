@@ -1,0 +1,735 @@
+/*.content {
+    float: left;
+    width: 92%;
+    margin: 0 4%;
+    padding: 20px 0;
+}*/
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Posição inicial e final */
+    }
+    50% {
+        transform: translateY(-20px);
+        /* Ponto mais alto do bounce */
+    }
+}
+
+
+/* Contêiner flexível para alinhar os elementos */
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* Espaçamento entre os elementos */
+    overflow: hidden;
+    /* Esconde o conteúdo que ultrapassa o contêiner */
+}
+
+
+/* Estilo base para os textos */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    /* Remove margens padrão */
+    opacity: 0;
+    /* Inicia invisível */
+    transition: opacity 1s, transform 1s;
+    /* Transição suave */
+}
+
+
+/* Efeito de surgir da esquerda */
+
+.surgir-esquerda {
+    animation: surgir-esquerda 1s forwards;
+}
+
+
+/* Efeito de surgir da direita */
+
+.surgir-direita {
+    animation: surgir-direita 1s forwards;
+}
+
+
+/* Animação para surgir da esquerda */
+
+@keyframes surgir-esquerda {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Animação para surgir da direita */
+
+@keyframes surgir-direita {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Atraso na animação para o parágrafo */
+
+p {
+    animation-delay: 0.5s;
+    /* O parágrafo surge após o título */
+}
+
+.btn-chamada {
+    background: transparent;
+    color: #ec4036;
+    text-decoration: none;
+    border: 2px #ec4036 solid;
+    border-radius: 50px;
+    padding: 13px 20px;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    transition: .3s;
+}
+
+.btn-chamada:hover {
+    background-color: #5a595c;
+    border: 2px #5a595c solid;
+    color: #ffffff;
+}
+
+
+/* HEADER */
+
+.header {
+    background: #ffffff;
+    padding: 0;
+}
+
+.header .content {
+    float: left;
+    padding: 0px 0;
+}
+
+.header-left {
+    width: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ebeae5;
+    background-image: url('https://www.carreracarneiro.com.br/wp-content/uploads/2024/04/tipos-de-aposentadoria.jpg');
+    background-position: center;
+}
+
+.header-left .header_logo {
+    text-align: center;
+    margin: auto;
+    float: none;
+    width: 200px;
+}
+
+.buttonZap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    animation: bounce 2s infinite;
+}
+
+.btn {
+    font-size: x-large;
+    display: flex;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #17d741;
+    color: #f3f4f6;
+    background-color: #17d741;
+    font-weight: 500;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.header-left .header_logo img {
+    margin: 15px 0;
+    border-radius: 50%;
+    border: solid #004295 5px;
+    padding: 5px;
+}
+
+
+/* Estilos gerais da div */
+
+.col-left-sobre {
+    text-align: center;
+    /* Centraliza o conteúdo */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte moderna */
+}
+
+
+/* Estilos da imagem */
+
+.imagem-advogado {
+    border-radius: 100%;
+    /* Imagem redonda */
+    padding: 10px;
+    border: 5px solid #520808;
+    /* Borda vermelha */
+    margin: 10px 0;
+    /* Espaçamento externo */
+    max-width: 200px;
+    /* Tamanho máximo da imagem */
+    height: auto;
+    /* Mantém a proporção */
+}
+
+
+/* Estilos do título */
+
+.col-left-sobre h4 {
+    font-size: 1.5rem;
+    /* Tamanho da fonte */
+    font-weight: 600;
+    /* Peso da fonte (negrito) */
+    color: #333;
+    /* Cor do texto */
+    margin: 10px 0;
+    /* Espaçamento externo */
+}
+
+
+/* Estilos do parágrafo de apresentação */
+
+.apresentacao {
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    color: #666;
+    /* Cor do texto */
+    max-width: 400px;
+    /* Largura máxima do parágrafo */
+    margin: 0 auto;
+    /* Centraliza o parágrafo */
+    line-height: 1.5;
+    /* Espaçamento entre linhas */
+    margin-bottom: 20px;
+}
+
+.header-left .title {
+    width: 100%;
+    padding: 25px;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.header-left .title span {
+    color: #dbb263 !important;
+}
+
+.header-left .texto {
+    width: 100%;
+    font-size: 18px;
+    color: #6f6f6f;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.header-right {
+    width: 100%;
+    float: left;
+    background-color: #353535;
+    padding: 20px 10px;
+}
+
+.header-right .title {
+    width: 100%;
+    float: left;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 23pxem;
+    color: #e3e3e3;
+    margin-bottom: 20px;
+    border-bottom: 1px #e3e3e3 solid;
+    padding-bottom: 10px;
+}
+
+.header-right .header-newsletter {
+    width: 100%;
+    float: left;
+}
+
+.header-right .header-newsletter .campo {
+    width: 100%;
+    height: 45px;
+    float: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    border: 3px solid #e2e2e2;
+    border-radius: 8px;
+    background: #ffffff;
+    margin-bottom: 15px;
+    outline: none;
+    padding: 5px 15px;
+    color: #002f5a;
+    transition: .3s;
+}
+
+.header-right .header-newsletter .campo:focus {
+    color: #353535 !important;
+    border: 3px solid #dbb263;
+}
+
+.header-right .header-newsletter .btn {
+    display: block;
+    width: 100%;
+    padding: 20px 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ffffff;
+    background: #dbb263;
+    border-radius: 8px;
+    border: none;
+    transition: .3s;
+}
+
+.header-right .header-newsletter .btn:hover {
+    background: #ef3d37;
+    color: #ffffff;
+}
+
+.header-right .header-newsletter .btn:focus {
+    box-shadow: none;
+}
+
+
+/* SERVIÇOS */
+
+.section-servicos {
+    padding: 10px 0px;
+    background-color: #0d2438;
+    border-top: 8px #353535 solid;
+}
+
+.section-servicos .content {
+    float: left;
+    padding: 1em 0;
+}
+
+.section-servicos .title {
+    width: 100%;
+    float: left;
+    margin-bottom: 0px;
+    font-size: 2em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.section-servicos .descricao {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 400;
+    color: #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.section-servicos .row {
+    width: 100%;
+    float: left;
+}
+
+.row h4,
+.row p {
+    color: white;
+    text-align: center;
+}
+
+.row h6 {
+    color: #cdb401;
+    text-align: center;
+}
+
+.servicos {
+    border: 2px solid white;
+    border-radius: 35px;
+}
+
+.section-servicos .servicos {
+    width: 100%;
+    float: left;
+    padding: 20px 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.section-servicos .servicos span {
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    align-items: center;
+    align-content: center;
+}
+
+.section-servicos .servicos span i {
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    line-height: 28px;
+    color: #dbb263;
+}
+
+.section-servicos .servicos p {
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 15px;
+    line-height: 22px;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+
+/* SOBRE */
+
+.section-sobre {
+    padding: 10px 0px;
+    background-color: #ffffff;
+}
+
+.section-sobre .content {
+    float: left;
+    padding: 1em 0;
+}
+
+.section-sobre .title {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #efb453;
+    padding-bottom: 5px;
+}
+
+.section-sobre .row {
+    width: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-sobre .row .col-left-sobre {
+    width: 100%;
+    margin: auto;
+}
+
+.section-sobre .row .col-right-sobre {
+    width: 100%;
+    margin-top: 0px;
+    background-color: #353535;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.section-sobre .row .col-right-sobre .title {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.section-sobre .row .col-right-sobre p {
+    width: 100%;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #0d2438;
+    color: white;
+    font-size: 0.875em;
+    font-family: 'Lato', sans-serif;
+}
+
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.footerInfos {
+    display: flex;
+}
+
+.footerLogo img {
+    border-radius: 50%;
+    width: 50%;
+    max-width: 200px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.footer .content {
+    padding: 3em 0em;
+}
+
+.row-footer {
+    padding: 0px 80px;
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-bottom: 0.5em;
+}
+
+
+/* INFO */
+
+.info {
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+    border: 1px solid gold;
+    border-radius: 50px;
+    padding: 25px;
+}
+
+.info span {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.info p {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    color: aliceblue;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    width: 100%;
+    float: left;
+    padding: 1em 0;
+    background: #353535;
+}
+
+.copyright .content {
+    padding: 1em 0em;
+}
+
+.copyright .copy-text p {
+    margin: 0;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+}
+
+.copyright .copy-text p a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.copyright .copy-text p a:hover {
+    text-decoration: underline;
+}
+
+.copyright .col {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+/* RESPONSIVO */
+
+@media (min-width:30em) {
+    .boxBannerTopo {
+        padding: 1em 0;
+    }
+}
+
+@media (min-width:37em) {}
+
+@media (min-width:48em) {
+    .header-right {
+        padding: 40px 20px;
+    }
+    .section-servicos {
+        padding: 40px 0px;
+    }
+    .section-servicos .servicos {
+        width: 32%;
+        margin-bottom: 0px;
+        margin-right: 2%;
+    }
+    .section-servicos .servicos:nth-of-type(3n+0) {
+        margin-right: 0;
+    }
+    .section-sobre .row .col-left-sobre {
+        width: 42%;
+        float: left;
+        margin-bottom: 0;
+    }
+    .section-sobre .row .col-right-sobre {
+        width: 56%;
+        float: right;
+        margin-top: 25px;
+    }
+    .info {
+        width: 30%;
+        margin-right: 5%;
+        margin-bottom: 0;
+    }
+    .info:nth-of-type(3n+0) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width:60em) {
+    .header-left .title {
+        font-size: 43px;
+    }
+    .header-left .texto {
+        font-size: 21px;
+    }
+    .header-right {
+        width: 40%;
+        float: right;
+        padding: 80px 40px;
+    }
+    .header-right .title {
+        font-size: 25px;
+    }
+    .header-right .header-newsletter .btn {
+        font-size: 22px;
+    }
+    .section-servicos {
+        padding: 30px 0px;
+    }
+    .section-servicos .content {
+        width: 80%;
+        padding: 1em 0;
+        margin: 0 10%;
+    }
+    .section-servicos .servicos p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .section-sobre {
+        padding: 0px 0px;
+    }
+    .section-sobre .content {
+        width: 80%;
+        padding: 0;
+        margin: 0 10%;
+    }
+    .section-sobre .row .col-right-sobre {
+        margin-top: 50px;
+    }
+    .section-sobre .row .col-right-sobre .title {
+        font-size: 28px;
+    }
+    .section-sobre .row .col-right-sobre p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:75em) {
+    .section-sobre .row .col-right-sobre {
+        margin-top: 100px;
+    }
+    .section-sobre .row .col-right-sobre .title {
+        font-size: 30px;
+    }
+    .section-sobre .row .col-right-sobre p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:80em) {
+    .section-sobre .row .col-left-sobre {
+        width: 36%;
+    }
+    .section-sobre .row .col-right-sobre {
+        width: 61%;
+        margin-top: 130px;
+    }
+}
+
+@media (min-width:85em) {
+    .content {
+        width: 80%;
+        margin: 0 10%;
+    }
+    .section-sobre .row .col-right-sobre {
+        width: 61%;
+        margin-top: 150px;
+    }
+}
+
+@media (min-width:100em) {}
