@@ -513,6 +513,7 @@ p {
 
 .footerInfos {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .footerLogo img {
